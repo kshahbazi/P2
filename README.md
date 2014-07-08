@@ -12,7 +12,7 @@ An xkcd-style password generator
 
 *xkcd.php* reads from CSV file and randomly populates an array
 
-User's selection of number of words, and inclusion (or exclusion) of **symbols**, **numbers** and **capitalization** incorporated.
+User's selection of **number of words**, and inclusion (or exclusion) of **symbols**, **numbers** and **capitalization** incorporated.
 
 ## Outside code
 Used a version of the online wordlist for the dictionary.
