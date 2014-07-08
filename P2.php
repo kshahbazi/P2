@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="P2.css">
 <title>P2 - xkcd Password Generator</title>
 
-<script language="JavaScript" type="text/javascript">
+<script type="text/javascript">
 /*
 Need to validate that one of 
 the 'number_of_words' radio
@@ -40,13 +40,13 @@ function formValidate(){
 			<p>P2 - xkcd Password Generator</p> 
 		</div>
     
-    <p id="main-text">
 				<h1>Create a hard-to-crack password <br> 
-				that's easy for you to remember.</h1><br>
-				
+				that's easy for you to remember.</h1>
+								
+			<p id="main-text">
        			Select the number of words you wish to generate in addition to numbers, symbols
        			and whether to have the first letter of each word capitalized, i.e. 'CamelCase'
-    </p>
+    		</p>
     <hr>
                 
     <form name="passwordForm" action="P2.php" method="post" onSubmit="return formValidate()">
