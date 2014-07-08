@@ -37,4 +37,11 @@ if(isset($_POST['include_symbol']))
 	$password .= $symbolsArray[0];
 }
 
+#include a symbol if specified 
+#by user on the formn submission
+if(isset($_POST['include_number']))
+{
+	$password .= mt_rand ( 0 , 99 );
+}
+
 ?>
