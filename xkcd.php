@@ -21,7 +21,7 @@ while(!feof($file)){
 fclose($file);
 
 #iterate through the dictionary 
-#depending of the number selected by the user
+#depending on the number selected by the user
 #to populate the new_array
 for ($i = 0; $i < $number_of_words; $i++){
 	array_push($new_array,$words[$i][0]);
@@ -33,14 +33,16 @@ for ($i = 0; $i < $number_of_words; $i++){
 #by user on the formn submission
 if(isset($_POST['include_symbol']))
 {
+	//randomize symbols
 	shuffle($symbolsArray);
 	$password .= $symbolsArray[0];
 }
 
-#include a symbol if specified 
+#include a number if specified 
 #by user on the formn submission
 if(isset($_POST['include_number']))
 {
+	//seed the random number from 0 to 99
 	$password .= mt_rand ( 0 , 99 );
 }
 
