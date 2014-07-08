@@ -25,7 +25,16 @@ fclose($file);
 #to populate the new_array
 for ($i = 0; $i < $number_of_words; $i++){
 	array_push($new_array,$words[$i][0]);
-	$password .= $new_array[$i];	
+	
+	#if CamelCase selected 
+	#capitalize the 1st letter of each word
+	if(isset($_POST['include_camel']))
+	{
+		$password .= ucwords($new_array[$i]);
+	}
+	else{
+		$password .= $new_array[$i];
+	}	
 }
 
 
