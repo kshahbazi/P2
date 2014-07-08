@@ -41,6 +41,12 @@ h1{
 	text-align:center;
 	
 }
+#error{
+	font-size:.75em;
+	color:#900;
+	text-align:center;
+	
+}
 
 #password{
 	font-size:2.1rem;

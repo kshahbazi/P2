@@ -5,11 +5,23 @@
 <title>P2 - xkcd Password Generator</title>
 
 <script language="JavaScript" type="text/javascript">
-function formValidate(passwordForm){
-	if (document.forms["passwordForm"]["number_of_words"]){
-		alert("Please select the number of words for your password");
-		return false;
-	}
+function formValidate(){
+	var radio_buttons = document.getElementsByName('number_of_words')
+
+    for (var i = 0; i < radio_buttons.length; i++) {
+        if (radio_buttons[i].checked) 
+		{
+        	//success, proceed to xkcd script
+			return true;
+    	}
+    };
+
+    //if no radio button selected, show error
+    document.getElementById('error').innerHTML = 'Please select 3, 4, or 5 for the number of words.';
+    //and clear any password generated previously
+	document.getElementById('password').innerHTML = '';
+    //failed, remain on this page until form is satisfactorily completed
+	return false;
 }
 </script>
 
@@ -31,7 +43,7 @@ function formValidate(passwordForm){
     </p>
     <hr>
                 
-    <form name="passwordForm" action="P2.php" method="post" onSubmit="return formValidate">
+    <form name="passwordForm" action="P2.php" method="post" onSubmit="return formValidate()">
 			<div id='form-options'>		 
 				
 				<div id="radioButtons">
@@ -40,6 +52,7 @@ function formValidate(passwordForm){
                 	<input type="radio" name="number_of_words" value="3" /> Three
                 	<input type="radio" name="number_of_words" value="4" /> Four
                 	<input type="radio" name="number_of_words" value="5" /> Five<br>
+                    <div id="error"></div>
 				</div>
                 
                 <input type="checkbox" name="include_number" value="include_number">Include Number<br>

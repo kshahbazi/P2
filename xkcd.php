@@ -6,8 +6,10 @@ $password=""; #place-holder for the to-be generated password
 $symbolsArray = array("!","@","#","$","%","^","&","*","?","~");#optional request by user to add a symbol to password
 
 #open csv file
+#approximately a thousand words
 $path = "mywordlist.csv";
 $file = fopen($path,"r");
+
 
 #populate the array with the contents of the file
 while(!feof($file)){
@@ -27,13 +29,12 @@ for ($i = 0; $i < $number_of_words; $i++){
 }
 
 
-/*#include a symbol if specified 
+#include a symbol if specified 
 #by user on the formn submission
-if($_POST['include_symbol'])
+if(isset($_POST['include_symbol']))
 {
 	shuffle($symbolsArray);
 	$password .= $symbolsArray[0];
 }
-*/
 
 ?>
