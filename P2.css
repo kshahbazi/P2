@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+	font-family:"Courier New", Courier, monospace;
+	
+}
+
+body{
+	background-color:#FFF;
+	text-align:center;
+	margin:0px ;
+	padding:0px;
+}
+
+h1{
+	margin:0px; 35%;
+}
+
+#inner-wrapper{
+	width:860px;
+    margin-left:auto;
+  	margin-right:auto;
+  	padding:0;
+	background-color:#EAE8D0;
+}
+
+#heading{
+	font-size:1.9rem;
+	font-weight:800;
+	background-color:#000;
+	color:#FFF;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	
+}
+#main-text{
+	padding:0px 45px;
+	margin: 10px 80px;
+	text-align:center;
+	
+}
+#error{
+	font-size:.75em;
+	color:#900;
+	text-align:center;
+	
+}
+
+#password{
+	font-size:2.1rem;
+	background-color:#FF695B;
+	color:#000;
+	text-align:center;
+	margin:15px 0px;
+	padding:15px;
+}
