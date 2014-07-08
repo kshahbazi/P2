@@ -1,8 +1,7 @@
 # CSCI S-15 >> Project 2
 
 ## Live URL
-<http://.....gopagoda.com>
-not yet uploaded to pagoda
+<http://p2-xkcd-ks.gopagoda.com/P2.php>
 
 ## Description of the project 
 An xkcd-style password generator
