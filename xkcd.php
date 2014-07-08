@@ -1,4 +1,13 @@
 <?php
+#to prevent an intial unselected radio button 
+#from throwing a warning/notice, set the array of 
+#'number_of_words to NULL, i.e. true ("something")
+if(!isset($_POST['number_of_words']))
+{
+	$_POST['number_of_words'] = NULL;
+	
+}
+
 $number_of_words = $_POST['number_of_words'];#as specified by user on the formn submission
 $words = array(); #an array of all the dictionary words
 $new_array = array(); #the array of passwords, to be populated as requested by user

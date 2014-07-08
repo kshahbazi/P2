@@ -5,9 +5,15 @@
 <title>P2 - xkcd Password Generator</title>
 
 <script language="JavaScript" type="text/javascript">
+/*
+Need to validate that one of 
+the 'number_of_words' radio
+buttons have been selected
+*/
 function formValidate(){
 	var radio_buttons = document.getElementsByName('number_of_words')
 
+	//since the buttons are an array, loop
     for (var i = 0; i < radio_buttons.length; i++) {
         if (radio_buttons[i].checked) 
 		{
@@ -35,7 +41,7 @@ function formValidate(){
 		</div>
     
     <p id="main-text">
-				<h1>Create a hard-to-crack password<br> 
+				<h1>Create a hard-to-crack password <br> 
 				that's easy for you to remember.</h1><br>
 				
        			Select the number of words you wish to generate in addition to numbers, symbols
@@ -52,7 +58,7 @@ function formValidate(){
                 	<input type="radio" name="number_of_words" value="3" /> Three
                 	<input type="radio" name="number_of_words" value="4" /> Four
                 	<input type="radio" name="number_of_words" value="5" /> Five<br>
-                    <div id="error"></div>
+					<div id="error"></div>
 				</div>
                 
                 <input type="checkbox" name="include_number" value="include_number">Include Number<br>
